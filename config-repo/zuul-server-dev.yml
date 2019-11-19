@@ -9,4 +9,4 @@ zuul:
 eureka:
   client:
     service-url:
-      defaultZnoe: http://localhost:10086/eureka/
+      defaultZone: http://localhost:10086/eureka/
