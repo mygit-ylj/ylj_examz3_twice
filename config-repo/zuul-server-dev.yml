@@ -1,0 +1,12 @@
+server:
+  port: 9999
+zuul:
+  ignored-services: '*'
+  routes:
+    consumer_router:
+      serviceId: consumer-service
+      path: /consumer_service/**
+eureka:
+  client:
+    service-url:
+      defaultZnoe: http://localhost:10086/eureka/

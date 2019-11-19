@@ -1,0 +1,10 @@
+server:
+  port: 10086
+eureka:
+  client:
+    service-url:
+      defaultZnoe: http://localhost:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: true
+  instance:
+    hostname: localhost
