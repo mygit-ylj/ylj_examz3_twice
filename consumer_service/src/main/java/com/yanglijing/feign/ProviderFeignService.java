@@ -4,6 +4,7 @@ import com.yanglijing.vo.TpsVo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -21,8 +22,8 @@ public interface ProviderFeignService {
     public List<String> selectAllUsers();
 
     @GetMapping("/tps/list")
-    public Object list(TpsVo tpsVo);
+    public Object list(@RequestParam TpsVo tpsVo);
 
     @GetMapping("/tps/deleteById")
-    public void deleteById(String id);
+    public void deleteById(@RequestParam String id);
 }
