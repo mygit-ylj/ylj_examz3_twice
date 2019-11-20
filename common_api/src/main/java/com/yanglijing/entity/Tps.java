@@ -16,7 +16,7 @@ import java.util.Date;
  * @Version V1.0
  **/
 @Entity
-@Table
+@Table(name = "tb_tps")
 @Data
 public class Tps implements Serializable {
 
@@ -34,7 +34,7 @@ public class Tps implements Serializable {
     private String remarks;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date created;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "tid")
-    private Type type;
+    private Type majorType;
 }

@@ -13,7 +13,7 @@ import java.io.Serializable;
  * @Version V1.0
  **/
 @Entity
-@Table
+@Table(name = "tb_type")
 @Data
 public class Type implements Serializable {
 
