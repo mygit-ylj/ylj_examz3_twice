@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -17,7 +18,9 @@ import java.util.Date;
 @Entity
 @Table
 @Data
-public class Tps {
+public class Tps implements Serializable {
+
+    private static final long serialVersionUID = 4241751127084279559L;
 
     @Id
     @GeneratedValue

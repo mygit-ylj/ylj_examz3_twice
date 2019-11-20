@@ -3,6 +3,7 @@ package com.yanglijing.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @ClassName Type
@@ -14,7 +15,9 @@ import javax.persistence.*;
 @Entity
 @Table
 @Data
-public class Type {
+public class Type implements Serializable {
+
+    private static final long serialVersionUID = -1789269527160689936L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
