@@ -21,12 +21,12 @@ public class TpsController {
     TpsService tpsService;
 
     @GetMapping("/list")
-    public Object list(@RequestParam("tpsVo") TpsVo tpsVo){
+    public Object list(@RequestParam("TpsVo") TpsVo tpsVo){
         return tpsService.selectList(tpsVo);
     }
 
     @GetMapping("/deleteById")
-    public void deleteById(String id){
+    public void deleteById(@RequestParam("id") String id){
         tpsService.deleteById(id);
     }
 }

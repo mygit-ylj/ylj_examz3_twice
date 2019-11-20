@@ -25,5 +25,5 @@ public interface ProviderFeignService {
     public Object list(@RequestParam("tpsVo") TpsVo tpsVo);
 
     @GetMapping("/tps/deleteById")
-    public void deleteById(@RequestParam String id);
+    public void deleteById(@RequestParam("id") String id);
 }
