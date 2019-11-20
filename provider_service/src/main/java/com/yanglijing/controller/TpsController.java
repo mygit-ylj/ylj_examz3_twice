@@ -21,7 +21,7 @@ public class TpsController {
     TpsService tpsService;
 
     @GetMapping("/list")
-    public Object list(@RequestParam("tpsVo") TpsVo tpsVo){
+    public Object list(TpsVo tpsVo){
         return tpsService.selectList(tpsVo);
     }
 
