@@ -2,10 +2,7 @@ package com.yanglijing.feign;
 
 import com.yanglijing.vo.TpsVo;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,7 +20,7 @@ public interface ProviderFeignService {
     public List<String> selectAllUsers();
 
     @RequestMapping(value = "/tps/list",method = RequestMethod.GET)
-    public Object list(@RequestParam("tpsVo") TpsVo tpsVo);
+    public Object list(@RequestBody TpsVo tpsVo);
 
     @RequestMapping("/tps/deleteById")
     public void deleteById(@RequestParam("id") String id);
