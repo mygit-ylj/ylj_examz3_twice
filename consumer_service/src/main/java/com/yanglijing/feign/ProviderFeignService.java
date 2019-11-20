@@ -21,9 +21,9 @@ public interface ProviderFeignService {
     @RequestMapping("/provider/users")
     public List<String> selectAllUsers();
 
-    @GetMapping("/tps/list")
+    @RequestMapping("/tps/list")
     public Object list(@RequestParam("tpsVo") TpsVo tpsVo);
 
-    @GetMapping("/tps/deleteById")
+    @RequestMapping("/tps/deleteById")
     public void deleteById(@RequestParam("id") String id);
 }
