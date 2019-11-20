@@ -22,7 +22,7 @@ public interface ProviderFeignService {
     public List<String> selectAllUsers();
 
     @GetMapping("/tps/list")
-    public Object list(TpsVo tpsVo);
+    public Object list(@RequestParam("tpsVo") TpsVo tpsVo);
 
     @GetMapping("/tps/deleteById")
     public void deleteById(@RequestParam String id);
