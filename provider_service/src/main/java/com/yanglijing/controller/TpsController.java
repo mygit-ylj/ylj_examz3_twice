@@ -3,10 +3,7 @@ package com.yanglijing.controller;
 import com.yanglijing.service.TpsService;
 import com.yanglijing.vo.TpsVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @ClassName TpsController
@@ -24,7 +21,7 @@ public class TpsController {
     TpsService tpsService;
 
     @GetMapping("/list")
-    public Object list(TpsVo tpsVo){
+    public Object list(@RequestParam("tpsVo") TpsVo tpsVo){
         return tpsService.selectList(tpsVo);
     }
 
