@@ -20,8 +20,8 @@ public class TpsController {
     @Autowired
     TpsService tpsService;
 
-    @GetMapping("/list")
-    public Object list(TpsVo tpsVo){
+    @PostMapping("/list")
+    public Object list(@RequestBody TpsVo tpsVo){
         return tpsService.selectList(tpsVo);
     }
 

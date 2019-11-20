@@ -27,7 +27,7 @@ public class ConsumerController {
         return providerFeignService.selectAllUsers();
     }
 
-    @RequestMapping("/list")
+    @PostMapping("/list")
     public Object list(TpsVo tpsVo){
         return providerFeignService.list(tpsVo);
     }
