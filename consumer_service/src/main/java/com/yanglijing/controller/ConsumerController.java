@@ -27,13 +27,13 @@ public class ConsumerController {
         return providerFeignService.selectAllUsers();
     }
 
-    @PostMapping("/list")
-    public Object list(TpsVo tpsVo){
+    @RequestMapping("/list")
+    public Object list(@RequestBody TpsVo tpsVo){
         return providerFeignService.list(tpsVo);
     }
 
     @GetMapping("/deleteById")
-    public void deleteById(String id){
+    public void deleteById(@RequestParam("id") String id){
         providerFeignService.deleteById(id);
     }
 
