@@ -51,6 +51,10 @@ public class TpsServiceImpl implements TpsService {
                     Predicate p3 = cb.lessThanOrEqualTo(root.get("created"), tpsVo.getEndDate());
                     list.add(p3);
                 }
+                if (tpsVo.getTid()!=null){
+                    Predicate p4 = cb.equal(root.get("majorType").get("tid"), tpsVo.getTid());
+                    list.add(p4);
+                }
 
                 Predicate[] newArr = list.toArray(new Predicate[list.size()]);
                 return cb.and(newArr);

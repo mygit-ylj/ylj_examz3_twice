@@ -26,7 +26,7 @@ public class Tps implements Serializable {
     @GeneratedValue
     private String id;
     private BigDecimal price;
-    private Integer jobId;
+    private String jobId;
     private String name;
     private String expert;
     private String phone;
