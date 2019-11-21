@@ -32,7 +32,7 @@ public class ConsumerController {
         return providerFeignService.list(tpsVo);
     }
 
-    @GetMapping("/deleteById")
+    @RequestMapping("/deleteById")
     public void deleteById(@RequestParam("id") String id){
         providerFeignService.deleteById(id);
     }

@@ -25,7 +25,7 @@ public class TpsController {
         return tpsService.selectList(tpsVo);
     }
 
-    @GetMapping("/deleteById")
+    @PostMapping("/deleteById")
     public void deleteById(@RequestParam("id") String id){
         tpsService.deleteById(id);
     }

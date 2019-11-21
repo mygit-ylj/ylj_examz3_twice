@@ -19,9 +19,10 @@ public interface ProviderFeignService {
     @RequestMapping("/provider/users")
     public List<String> selectAllUsers();
 
-    @RequestMapping(value = "/tps/list",method = RequestMethod.POST)
+    //@RequestMapping(value = "/tps/list",method = RequestMethod.POST)
+    @PostMapping("/tps/list")
     public Object list(@RequestBody TpsVo tpsVo);
 
-    @RequestMapping("/tps/deleteById")
+    @PostMapping("/tps/deleteById")
     public void deleteById(@RequestParam("id") String id);
 }
