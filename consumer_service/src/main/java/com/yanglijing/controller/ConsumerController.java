@@ -1,5 +1,6 @@
 package com.yanglijing.controller;
 
+import com.yanglijing.entity.Tps;
 import com.yanglijing.feign.ProviderFeignService;
 import com.yanglijing.vo.TpsVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,9 +33,9 @@ public class ConsumerController {
         return providerFeignService.list(tpsVo);
     }
 
-    @RequestMapping("/deleteById")
-    public void deleteById(@RequestParam("id") String id){
-        providerFeignService.deleteById(id);
+    @RequestMapping("/deleteByIds")
+    public void deleteByIds(@RequestParam("ids")List<Tps> ids){
+        providerFeignService.deleteByIds(ids);
     }
 
 }

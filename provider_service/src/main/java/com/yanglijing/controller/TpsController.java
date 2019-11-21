@@ -1,9 +1,12 @@
 package com.yanglijing.controller;
 
+import com.yanglijing.entity.Tps;
 import com.yanglijing.service.TpsService;
 import com.yanglijing.vo.TpsVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @ClassName TpsController
@@ -25,8 +28,8 @@ public class TpsController {
         return tpsService.selectList(tpsVo);
     }
 
-    @PostMapping("/deleteById")
-    public void deleteById(@RequestParam("id") String id){
-        tpsService.deleteById(id);
+    @PostMapping("/deleteByIds")
+    public void deleteByIds(@RequestParam("ids")List<Tps> ids){
+        tpsService.deleteByIds(ids);
     }
 }

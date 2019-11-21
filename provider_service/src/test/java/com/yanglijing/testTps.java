@@ -31,7 +31,7 @@ public class testTps {
         Tps tps = new Tps();
         tps.setId("SQ03100");
         tps.setPrice(new BigDecimal(20000));
-        tps.setJobId(200001);
+        tps.setJobId("200001");
         tps.setName("ylj");
         tps.setPhone("123456789");
         tps.setPhotoUrl("1bdea94a-7e90-46ed-8626-5fc9c42ef623.jpg");

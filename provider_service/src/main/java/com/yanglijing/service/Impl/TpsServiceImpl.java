@@ -65,7 +65,7 @@ public class TpsServiceImpl implements TpsService {
     }
 
     @Override
-    public void deleteById(String id) {
-        tpsReposiitory.deleteById(id);
+    public void deleteByIds(List<Tps> ids) {
+        tpsReposiitory.deleteAll(ids);
     }
 }

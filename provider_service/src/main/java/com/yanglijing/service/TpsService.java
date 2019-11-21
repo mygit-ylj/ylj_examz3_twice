@@ -5,6 +5,8 @@ import com.yanglijing.vo.TpsVo;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 /**
  * @InterfaceName TpsService
  * @Description: TODO
@@ -15,5 +17,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface TpsService {
     Page<Tps> selectList(TpsVo tpsVo);
 
-    void deleteById(String id);
+    void deleteByIds(List<Tps> ids);
 }
